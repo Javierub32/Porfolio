@@ -1,47 +1,54 @@
 ---
-const personalImageAlt = "Miguel Ángel"
-import Badge from "../components/Badge.astro"
-import LinkedInIcon from "../components/LinkedIn.astro"
-import MailIcon from "../components/Mail.astro"
-import SocialPill from "../components/SocialPill.astro"
+const personalImageAlt = "Miguel Ángel";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import MailIcon from "./icons/Mail.astro";
+import SocialPill from "./SocialPill.astro";
 ---
 
-<div class="max-w-xl m-auto mt-20">
-	<div class="flex gap-4 mb-4">
-		<img
-			class="rounded-full shadow-lg size-16"
-			src="/profile.webp"
-			alt={personalImageAlt}
-		/>
-		<a
-			href="https://linkedin.com/in/javierub38"
-			target="_blank"
-			rel="noopener"
-			class="flex items-center transition md:justify-center md:hover:scale-105"
-		>
-			<Badge>Disponible para trabajar</Badge>
-		</a>
-	</div>
-	<h1
-		class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-	>
-		Hey, soy Javier
-	</h1>
-	<p
-		class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-	>
-		<strong>Estudiante de Ingeniería de Software </strong
-		> en la Universidad de Málaga. Texto texto texto texto texto texto.
-		únicas.
-	</p>
-	<nav class="flex flex-wrap gap-4 mt-8">
-		<SocialPill href="mailto:javierub38@gmail.com">
-			<MailIcon class="size-4" />
-			Contáctame
-		</SocialPill>
-		<SocialPill href="https://linkedin.com/in/javierub38">
-			<LinkedInIcon class="size-4" />
-			LinkedIn
-		</SocialPill>
-	</nav>
+<div class="fixed top-0 left-0 z-[-2] h-full w-full bg-neutral-950 
+  bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
 </div>
+<div class="max-w-[30rem] m-auto pt-0 sm:pt-30 min-h-screen flex flex-col justify-center sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
+  <div class="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
+    <img
+      class="rounded-full shadow-lg size-26 sm:size-24 md:size-30 lg:size-36 sm:order-2"
+      src="/profile.webp"
+      alt={personalImageAlt}
+    />
+    
+    <div class="sm:order-1">
+      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white text-center sm:text-left">
+        Hey, soy Javier
+      </h1>
+      <p class="mt-6 px-4 text-xl text-balance [&>strong]:text-yellow-200 [&>strong]:font-semibold text-gray-300 text-center sm:text-left sm:px-0">
+        <strong>Estudiante de Ingeniería de Software </strong>
+        en la Universidad de Málaga y estudiante en 42 Málaga. Estoy aprendiendo a desarrollar aplicaciones <strong>web Fullstack</strong>. Me encanta aprender construyendo.
+      </p>
+    </div>
+  </div>
+  <nav class="flex flex-wrap gap-4 mt-8 justify-center sm:justify-start">
+
+    <SocialPill href="https://linkedin.com/in/javierub38">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/Javierub32">
+      <GitHubIcon class="size-4" />
+      Github
+    </SocialPill>
+    <SocialPill href="mailto:javierub38@gmail.com">
+      <MailIcon class="size-4" />
+      javierub38@gmail.com
+    </SocialPill>
+  </nav>
+  <div class="pt-16 sm:pt-45 mx-auto">
+	<a href="#experiencia" class="flex gap-2 animate-bounce text-yellow-300 font-semibold">
+    Experiencia
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"></path>
+    </svg>
+	</a>
+  </div>
+</div>
+

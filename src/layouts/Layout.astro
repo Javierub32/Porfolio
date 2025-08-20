@@ -7,22 +7,29 @@ import '../styles/global.css';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/webp" href="/logo.webp" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Porfolio de Javier</title>
 	</head>
 	<body>
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<slot />
 	</body>
 </html>
 
 <style>
-	html,
+	html {
+		margin: 0;
+		width: 100%;
+		color-scheme: dark;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+	}
+	
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		min-height: 100vh;
 		color-scheme: dark;
+		overflow-x: hidden;
 	}
 </style>
