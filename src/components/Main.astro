@@ -6,10 +6,8 @@ import MailIcon from "./icons/Mail.astro";
 import SocialPill from "./SocialPill.astro";
 ---
 
-<div class="fixed top-0 left-0 z-[-2] h-full w-full bg-neutral-950 
-  bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-</div>
-<div class="max-w-[30rem] m-auto pt-0 sm:pt-30 min-h-screen flex flex-col justify-center sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
+<div class="w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+  <div class="max-w-[30rem] m-auto pt-0 sm:pt-30 min-h-screen flex flex-col justify-center sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
   <div class="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
     <img
       class="rounded-full shadow-lg size-26 sm:size-24 md:size-30 lg:size-36 sm:order-2"
@@ -43,12 +41,13 @@ import SocialPill from "./SocialPill.astro";
     </SocialPill>
   </nav>
   <div class="pt-16 sm:pt-45 mx-auto">
-	<a href="#experiencia" class="flex gap-2 animate-bounce text-yellow-300 font-semibold">
-    Experiencia
+	<a href="#projects" class="flex gap-2 animate-bounce text-yellow-300 font-semibold">
+    Proyectos
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"></path>
     </svg>
 	</a>
   </div>
+</div>
 </div>
 
