@@ -5,29 +5,29 @@ const { id } = Astro.props;
 
 const projects = [
   {
-    section: "SISTEMAS GRÁFICOS",
+    section: "FULLSTACK",
     title: "FDF - Wireframe Viewer",
     url: "https://github.com/Javierub32/42-cursus/tree/main/Rank_02/FDF",
     imageUrl: "/fdf.jpg",
-    tags: ["C", "Makefile", "MinilibX", "Matemáticas"],
+    tags: ["C", "Makefile", "MinilibX"],
     description:
       "Proyecto de visualización 3D que renderiza mapas de altura. Implementa el algoritmo de Bresenham para el trazado de líneas y transformaciones de matriz para proyección isométrica.<br>El proyecto incluye rotación, zoom y traslación interactiva del modelo 3D, así como gradientes de color basados en la altura del terreno.",
   },
   {
     section: "ALGORITMOS",
     title: "Push Swap - Sorting Algorithm",
-    url: "https://github.com/Javierub32/42-cursus/tree/main/Rank_02/Push_swap",
-    imageUrl: "/fdf.jpg",
-    tags: ["C", "Algoritmos", "Complejidad", "Optimización"],
+    url: "https://github.com/Javierub32/42-cursus/tree/main/Rank_02/Push_Swap",
+    imageUrl: "/pushswap.webp",
+    tags: ["C", "Makefile"],
     description:
       "Algoritmo de ordenación eficiente usando dos stacks y un conjunto limitado de operaciones. Implementa estrategias como Radix Sort y Quick Sort adaptadas al problema específico. El desafío consiste en minimizar el número de operaciones necesarias para ordenar cualquier conjunto de números, optimizando tanto para casos pequeños como para conjuntos de 500+ elementos.",
   },
   {
     section: "DESARROLLO WEB",
     title: "Portfolio Personal",
-    url: "#",
-    imageUrl: "/fdf.jpg",
-    tags: ["Astro", "Tailwind CSS", "TypeScript", "Responsive"],
+    url: "https://github.com/Javierub32/Porfolio",
+    imageUrl: "/portfolio.jpg",
+    tags: ["Astro", "Tailwind CSS", "TypeScript", "HTML"],
     description:
       "Portfolio personal desarrollado con Astro y Tailwind CSS, destacando por su diseño responsive y optimización de rendimiento. Incluye animaciones CSS personalizadas, navegación fluida, componentes reutilizables y un sistema de scroll animado. El proyecto demuestra conocimientos en desarrollo frontend moderno, diseño UX/UI y mejores prácticas de accesibilidad web.",
   },
@@ -55,7 +55,7 @@ const projects = [
           {p.section}
         </p>
         <h3 class="mt-1 text-2xl md:text-3xl font-semibold text-gray-100 tracking-tight">
-          <a href={p.url} target="_blank" rel="noopener">{p.title}</a>
+          {p.title}
         </h3>
         <div class="mt-4 prose prose-invert mb-4" set:html={p.description}>
         </div>
