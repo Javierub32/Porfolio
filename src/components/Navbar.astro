@@ -15,9 +15,7 @@ const navItems = [
     label: "contacto",
     url: "mailto:javierub38@gmail.com",
   },
-]
-
-
+];
 ---
 
 <header
@@ -26,14 +24,15 @@ const navItems = [
   <nav
     class="flex px-3 text-sm font-medium rounded-full text-gray-200 justify-center items-center gap-4"
   >
-        <a
-          class="relative block px-2  transition "
-          id="scroll-top-btn"
-        >
-  		<div class="hover:scale-120 rounded-full transition-all px-2">
-		  <img src="../../logo.webp" alt="" class="size-7  ">
-		</div>
-        </a>
+    <a
+      class="relative block px-2 transition"
+      id="scroll-top-btn"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <div class="hover:scale-120 rounded-full transition-all px-2">
+        <img src="../../logo.webp" alt="" class="size-7" />
+      </div>
+    </a>
     {
       navItems.map((link) => (
         <a
@@ -48,67 +47,9 @@ const navItems = [
   </nav>
 </header>
 
-<script is:inline>
-	document.addEventListener("DOMContentLoaded", function() {
-		console.log("Navbar script loaded");
-		const scrollTopBtn = document.getElementById("scroll-top-btn");
-		
-		if (scrollTopBtn) {
-			console.log("Botón volver arriba encontrado");
-			
-			// Función para obtener la posición del scroll de manera confiable
-			function getScrollPosition() {
-				return window.pageYOffset || 
-				       document.documentElement.scrollTop || 
-				       document.body.scrollTop || 
-				       0;
-			}
-			
-			// Agregar listener para scroll para debug
-			window.addEventListener('scroll', function() {
-				console.log("Scroll detectado, posición:", getScrollPosition());
-			});
-			
-			scrollTopBtn.addEventListener("click", function(e) {
-				e.preventDefault();
-				const currentPosition = getScrollPosition();
-				console.log("Click en volver arriba");
-				console.log("Posición actual:", currentPosition);
-
-				if (currentPosition === 0) {
-					console.log("Ya estás en la parte superior");
-					return;
-				}
-
-				// Múltiples métodos para asegurar que funcione
-				try {
-					// Método principal
-					window.scrollTo({ top: 0, behavior: "smooth" });
-					setTimeout(() => {
-						const newPosition = getScrollPosition();
-						if (newPosition > 10) {
-							console.log("Usando fallback scroll");
-							document.documentElement.scrollTop = 0;
-							document.body.scrollTop = 0;
-							window.scrollTo(0, 0);
-						}
-					}, 100);
-				} catch (error) {
-					console.error("Error en scroll:", error);
-					document.documentElement.scrollTop = 0;
-					document.body.scrollTop = 0;
-					window.scrollTo(0, 0);
-				}
-			});
-		} else {
-			console.error("Botón volver arriba no encontrado");
-		}
-	});
-</script>
-
 <style>
   nav {
-	background-color: oklch(27.8% 0.033 256.848);
+    background-color: oklch(27.8% 0.033 256.848);
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;

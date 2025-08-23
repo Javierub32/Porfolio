@@ -1,35 +1,55 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/webp" href="/logo.webp" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Porfolio de Javier</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/webp" href="/logo.webp" />
+    <meta name="generator" content={Astro.generator} />
+	<!-- Primary Meta Tags -->
+	<title>Porfolio de Javier</title>
+	<meta name="title" content="Porfolio de Javier" />
+	<meta name="description" content="Estudiante de Ingeniería de Software en la Universidad de Málaga y estudiante en 42 Málaga. Estoy aprendiendo a desarrollar aplicaciones web Fullstack. Me encanta aprender construyendo." />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://metatags.io/" />
+	<meta property="og:title" content="Porfolio de Javier" />
+	<meta property="og:description" content="Estudiante de Ingeniería de Software en la Universidad de Málaga y estudiante en 42 Málaga. Estoy aprendiendo a desarrollar aplicaciones web Fullstack. Me encanta aprender construyendo." />
+	<meta property="og:image" content="https://porfolio-javierub.vercel.app/portada.webp" />
+
+	<!-- X (Twitter) -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://metatags.io/" />
+	<meta property="twitter:title" content="Porfolio de Javier" />
+	<meta property="twitter:description" content="Estudiante de Ingeniería de Software en la Universidad de Málaga y estudiante en 42 Málaga. Estoy aprendiendo a desarrollar aplicaciones web Fullstack. Me encanta aprender construyendo." />
+	<meta property="twitter:image" content="https://porfolio-javierub.vercel.app/portada.webp" />
+
+	<!-- Meta Tags Generated with https://metatags.io -->
+    
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html {
-		margin: 0;
-		width: 100%;
-		color-scheme: dark;
-		overflow-x: hidden;
-		scroll-behavior: smooth;
-	}
-	
-	body {
-		margin: 0;
-		width: 100%;
-		min-height: 100vh;
-		color-scheme: dark;
-		overflow-x: hidden;
-	}
+  html {
+    margin: 0;
+    width: 100%;
+    color-scheme: dark;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    color-scheme: dark;
+    overflow-x: hidden;
+  }
 </style>

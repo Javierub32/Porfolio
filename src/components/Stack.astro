@@ -14,7 +14,6 @@ import CSSIcon from "./icons/CSS.astro";
 import HTMLIcon from "./icons/HTML.astro";
 import GitIcon from "./icons/Git.astro";
 
-
 const techStack = [
   {
     lang: "HTML",
@@ -52,10 +51,10 @@ const techStack = [
     level: "Básico",
   },
 
-    {
+  {
     lang: "Java",
     icon: JavaIcon,
-    level: "Avanzado",
+    level: "Intermedio",
   },
   {
     lang: "C",
@@ -67,31 +66,48 @@ const techStack = [
     icon: GitIcon,
     level: "Avanzado",
   },
-]
+];
 ---
+
 <div class="w-full bg-neutral-950">
-	<section id={id} class="m-auto min-h-screen max-w-5xl px-4 sm:px-6 lg:px-8 pb-10">	
-		<header class="pt-20 mb-14">
-			<p class="font-semibold text-blue-400 tracking-wide">STACK TECNOLÓGICO</p>
-			<h2 class="font-semibold text-gray-200 text-3xl md:text-4xl mt-2 tracking-tight mb-[-20px]">
-				Tecnologías principales
-			</h2>
-		</header>
-		<div class="flex justify-center">
-			<div class="flex flex-wrap justify-center gap-4 max-w-xl sm:max-w-2xl  md:max-w-3xl lg:max-w-4xl">
-				{techStack.map(({ lang, icon: Icon, level }) => (
-					<article class="w-32 border-2 border-white/10 bg-gray-900/20 rounded-xl flex flex-col items-center hover:scale-110 transition-all">
-						<h3 class="mt-2 text-xl font-semibold text-zinc-100 tracking-wide">{lang}</h3>
-						<Icon class="size-12 m-4" />
-						<div class="mb-4 rounded-full bg-[rgba(22,22,22,255)] px-3 py-1 text-sm text-gray-200 ring-1 ring-white/10">{level}</div>
-					</article>
-				))}
-			</div>
-		</div>
-	</section>
-	{/*"max-w-[30rem] m-auto pt-0 sm:pt-30 min-h-screen flex flex-col justify-center sm:max-w-xl md:max-w-2xl lg:max-w-3xl" */}
+  <section
+    id={id}
+    class="m-auto min-h-screen max-w-5xl px-4 sm:px-6 lg:px-8 pb-10"
+  >
+    <header class="pt-20 mb-14">
+      <p class="font-semibold text-blue-400 tracking-wide">STACK TECNOLÓGICO</p>
+      <h2
+        class="font-semibold text-gray-200 text-3xl md:text-4xl mt-2 tracking-tight mb-[-20px]"
+      >
+        Tecnologías principales
+      </h2>
+    </header>
+    <div class="flex justify-center">
+      <div
+        class="flex flex-wrap justify-center gap-4 max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
+      >
+        {
+          techStack.map(({ lang, icon: Icon, level }) => (
+            <article class="w-32 border-2 border-white/10 bg-gray-900/20 rounded-xl flex flex-col items-center hover:scale-110 transition-all">
+              <h3 class="mt-2 text-xl font-semibold text-zinc-100 tracking-wide">
+                {lang}
+              </h3>
+              <Icon class="size-12 m-4" />
+              <div class="mb-4 rounded-full bg-[rgba(22,22,22,255)] px-3 py-1 text-sm text-gray-200 ring-1 ring-white/10">
+                {level}
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  {
+    /*"max-w-[30rem] m-auto pt-0 sm:pt-30 min-h-screen flex flex-col justify-center sm:max-w-xl md:max-w-2xl lg:max-w-3xl" */
+  }
 </div>
-{/*
+{
+  /*
 
   <article class="w-32 border-2 border-white/10 bg-gray-900/20 rounded-xl flex flex-col items-center hover:scale-110 transition-all">
 	<h3 class="mt-2 text-xl font-semibold text-gray-100 tracking-wide">GitHub</h3>
@@ -105,4 +121,5 @@ const techStack = [
   <div class="mb-4 rounded-full bg-slate-900/80 px-3 py-1 text-sm text-slate-200 ring-1 ring-sky-300/25">Advanced</div>
 </article>
 
-*/}
+*/
+}
